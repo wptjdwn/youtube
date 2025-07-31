@@ -24,10 +24,14 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed main.py
+        pyinstaller --onefile --windowed youtube-shorts-auto/youtube_shorts_macro4.py
+
+    - name: Check dist folder
+      run: dir dist
 
     - name: Upload executable
       uses: actions/upload-artifact@v4
       with:
         name: youtube-shorts-exe
-        path: dist/main.exe
+        path: dist/youtube_shorts_macro4.exe
+
